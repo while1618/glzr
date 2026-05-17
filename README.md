@@ -2,27 +2,18 @@
 
 Personal configuration for [GlazeWM](https://github.com/glzr-io/glazewm) and [Zebar](https://github.com/glzr-io/zebar) on Windows.
 
-## Structure
+## Setup
 
-```
-glazewm/
-  config.yaml       GlazeWM window manager config
-zebar/
-  bar/              Zebar widget package
-    zpack.json      Zebar package manifest
-    bar/            Widget source (SolidJS)
-```
+Copy both `glazewm` and `zebar` folders into `%userprofile%\.glzr\`, overriding anything already there.
 
-## GlazeWM
+GlazeWM is ready to use as-is.
 
-Copy `glazewm/config.yaml` to the GlazeWM config directory:
+For Zebar, build the widget first:
 
 ```powershell
-copy glazewm\config.yaml %userprofile%\.glzr\glazewm\config.yaml
+cd zebar\bar\bar
+pnpm i
+pnpm run build
 ```
 
-Reload the config from within GlazeWM with `alt+shift+r`, or restart GlazeWM.
-
-## Zebar
-
-See [zebar/bar/README.md](zebar/bar/README.md) for build and deploy instructions.
+That's it.

@@ -1,0 +1,51 @@
+{
+  "$schema": "https://github.com/glzr-io/zebar/raw/v3.3.1/resources/zpack-schema.json",
+  "name": "bar",
+  "version": "1.0.0",
+  "description": "A simple top bar widget.",
+  "tags": [],
+  "previewImages": ["resources\\preview-image.png"],
+  "repositoryUrl": "https://github.com/while1618/glzr",
+  "widgets": [
+    {
+      "name": "bar",
+      "htmlPath": "bar/dist/index.html",
+      "zOrder": "normal",
+      "shownInTaskbar": false,
+      "focused": false,
+      "resizable": false,
+      "transparent": true,
+      "includeFiles": ["bar/dist/**"],
+      "caching": {
+        "defaultDuration": 604800,
+        "rules": []
+      },
+      "privileges": {
+        "shellCommands": [
+          {
+            "program": "explorer.exe",
+            "argsRegex": "ms-actioncenter://"
+          }
+        ]
+      },
+      "presets": [
+        {
+          "name": "default",
+          "anchor": "top_left",
+          "offsetX": "0px",
+          "offsetY": "0px",
+          "width": "100%",
+          "height": "40px",
+          "monitorSelection": {
+            "type": "all"
+          },
+          "dockToEdge": {
+            "enabled": false,
+            "edge": null,
+            "windowMargin": "0px"
+          }
+        }
+      ]
+    }
+  ]
+}

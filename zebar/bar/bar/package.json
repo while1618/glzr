@@ -1,0 +1,20 @@
+{
+  "name": "bar",
+  "version": "1.0.0",
+  "description": "A simple bar component for zebar",
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite build --watch"
+  },
+  "dependencies": {
+    "@kobalte/core": "0.13.11",
+    "solid-js": "1.9.13",
+    "zebar": "3.3.1"
+  },
+  "devDependencies": {
+    "rollup-plugin-copy": "3.5.0",
+    "typescript": "6.0.3",
+    "vite": "8.0.13",
+    "vite-plugin-solid": "2.11.12"
+  }
+}

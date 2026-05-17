@@ -158,20 +158,6 @@ window_rules:
       - window_process: { equals: "POWERPNT" }
         window_class: { not_regex: "PPTFrameClass" }
 
-binding_modes:
-  - name: "resize"
-    keybindings:
-      - commands: ["resize --width -2%"]
-        bindings: ["h", "left"]
-      - commands: ["resize --width +2%"]
-        bindings: ["l", "right"]
-      - commands: ["resize --height +2%"]
-        bindings: ["k", "up"]
-      - commands: ["resize --height -2%"]
-        bindings: ["j", "down"]
-      - commands: ["wm-disable-binding-mode --name resize"]
-        bindings: ["escape", "enter"]
-
 keybindings:
   # Applications
   - commands: ["shell-exec wt"]

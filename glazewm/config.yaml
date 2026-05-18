@@ -162,7 +162,7 @@ keybindings:
   # Applications
   - commands: ["shell-exec wt"]
     bindings: ["alt+enter"]
-  - commands: ["shell-exec zen-browser"]
+  - commands: ["shell-exec zen"]
     bindings: ["alt+w"]
   - commands: ["shell-exec explorer"]
     bindings: ["alt+e"]

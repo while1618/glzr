@@ -11,6 +11,7 @@ import MediaStatus from "./Media/MediaStatus";
 import MemoryStatus from "./Memory/MemoryStatus";
 import NetworkStatus from "./Network/NetworkStatus";
 import Systray from "./Systray/Systray";
+import TilingBinding from "./TilingBinding/TilingBinding";
 import TimeStatus from "./Time/TimeStatus";
 import VolumeStatus from "./Volume/VolumeStatus";
 import WindowTitle from "./WindowTitle/WindowTitle";
@@ -40,9 +41,8 @@ function App() {
     <div class="app">
       <div class="left">
         <WindowsButton glazewm={output.glazewm} />
-        {/* <SearchButton glazewm={output.glazewm} /> */}
         <Workspaces glazewm={output.glazewm} />
-        {/* <TilingBinding glazewm={output.glazewm} /> */}
+        <TilingBinding glazewm={output.glazewm} />
         <MediaStatus media={output.media} />
       </div>
       <div class="center">

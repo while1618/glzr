@@ -22,8 +22,8 @@ const InputMethodStatus: Component<InputMethodStatusProps> = (props) => {
     if (lower.startsWith("fr")) return "fr";
     if (lower.startsWith("de")) return "de";
     if (lower.startsWith("es")) return "es";
-    if (lower.startsWith("sr")) return "sr";
     if (lower.startsWith("sr_cyrl")) return "sr_cyrl";
+    if (lower.startsWith("sr")) return "sr";
     return lower.slice(0, 2).toUpperCase();
   };
 

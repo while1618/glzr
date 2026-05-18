@@ -1,4 +1,4 @@
-import { Component, createMemo } from "solid-js";
+import { Component, Show, createMemo } from "solid-js";
 import { BatteryOutput, GlazeWmOutput } from "zebar";
 import { useAnimatedClick } from "../hooks/useAnimatedClick";
 import "./style.css";
@@ -85,20 +85,22 @@ const BatteryStatus: Component<BatteryStatusProps> = (props) => {
   };
 
   return (
-    <button
-      classList={{
-        battery: true,
-        [getBatteryUsageRate(props.battery?.chargePercent)]: true,
-        "clicked-animated": isActive(),
-      }}
-      title={titleText()}
-      onClick={handleOpenActionCenterClick}
-    >
-      <span class="content">
-        <img src={iconSrc()} class="i-battery" alt="Battery status" />
-        {percent()}%
-      </span>
-    </button>
+    <Show when={props.battery && props.battery.state !== "unknown"}>
+      <button
+        classList={{
+          battery: true,
+          [getBatteryUsageRate(props.battery?.chargePercent)]: true,
+          "clicked-animated": isActive(),
+        }}
+        title={titleText()}
+        onClick={handleOpenActionCenterClick}
+      >
+        <span class="content">
+          <img src={iconSrc()} class="i-battery" alt="Battery status" />
+          {percent()}%
+        </span>
+      </button>
+    </Show>
   );
 };
 

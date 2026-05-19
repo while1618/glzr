@@ -6,16 +6,25 @@ Personal configuration for [GlazeWM](https://github.com/glzr-io/glazewm) and [Ze
 
 ## Setup
 
-Copy both `glazewm` and `zebar` folders into `%userprofile%\.glzr\`, overriding anything already there.
+Install dependencies:
+
+```powershell
+winget install glzr-io.GlazeWM
+winget install glzr-io.Zebar
+winget install AutoHotkey.AutoHotkey
+```
+For Zebar, [AutoHotkey](https://www.autohotkey.com/) is required as a dependency.
+
+Copy `glazewm` and `zebar` folders into `%userprofile%\.glzr\`, overriding anything already there.
 
 GlazeWM is ready to use as-is.
 
-For Zebar, build the widget first:
+Zebar requires to be built first, open PowerShell and run the following commands:
 
 ```powershell
-cd zebar\bar\bar
-pnpm i
+cd ~\.glzr\zebar\bar\bar
+pnpm i  # you can use npm or yarn if you prefer
 pnpm run build
 ```
 
-That's it.
+Once everything is set up, start GlazeWM, Zebar will automatically start as well.

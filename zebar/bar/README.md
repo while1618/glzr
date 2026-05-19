@@ -4,7 +4,7 @@ A top bar widget for [Zebar](https://github.com/glzr-io/zebar) built with SolidJ
 
 ## Requirements
 
-- [Node.js](https://nodejs.org) and [pnpm](https://pnpm.io)
+- [Node.js](https://nodejs.org)
 - [Zebar](https://github.com/glzr-io/zebar) installed on Windows
 - [GlazeWM](https://github.com/glzr-io/glazewm) (required by several widgets)
 - [AutoHotkey v2](https://www.autohotkey.com) (required for systray button scripts)
@@ -14,6 +14,6 @@ A top bar widget for [Zebar](https://github.com/glzr-io/zebar) built with SolidJ
 From the `bar/` directory:
 
 ```bash
-pnpm install
-pnpm run build
+npm install
+npm run build
 ```

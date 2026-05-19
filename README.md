@@ -1,30 +1,36 @@
 # glzr
 
-Personal configuration for [GlazeWM](https://github.com/glzr-io/glazewm) and [Zebar](https://github.com/glzr-io/zebar) on Windows.
+Configuration for [GlazeWM](https://github.com/glzr-io/glazewm) and [Zebar](https://github.com/glzr-io/zebar) on Windows.
 
 ![Screenshot](/zebar/bar/resources/preview_image.png?raw=true)
 
-## Setup
-
-Install dependencies:
+## Installation
 
 ```powershell
 winget install glzr-io.GlazeWM
 winget install glzr-io.Zebar
-winget install AutoHotkey.AutoHotkey
+winget install AutoHotkey.AutoHotkey  # required by Zebar
 ```
-For Zebar, [AutoHotkey](https://www.autohotkey.com/) is required as a dependency.
+
+## Setup
 
 Copy `glazewm` and `zebar` folders into `%userprofile%\.glzr\`, overriding anything already there.
 
-GlazeWM is ready to use as-is.
+### Zebar
 
-Zebar requires to be built first, open PowerShell and run the following commands:
+[Node.js](https://nodejs.org/) is required to build Zebar, if you don't have it, you can install it with:
+
+```powershell 
+winget install OpenJS.NodeJS
+```
+To build, open PowerShell and run the following commands:
 
 ```powershell
 cd ~\.glzr\zebar\bar\bar
-pnpm i  # you can use npm or yarn if you prefer
-pnpm run build
+npm i
+npm run build
 ```
 
-Once everything is set up, start GlazeWM, Zebar will automatically start as well.
+## Usage
+
+Start GlazeWM, Zebar will launch automatically.

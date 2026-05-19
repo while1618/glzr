@@ -203,8 +203,6 @@ keybindings:
     bindings: ["alt+shift+k", "alt+shift+up"]
   - commands: ["resize --height -5%"]
     bindings: ["alt+shift+j", "alt+shift+down"]
-  - commands: ["wm-enable-binding-mode --name resize"]
-    bindings: ["alt+r"]
 
   # Window states
   - commands: ["close"]

@@ -2,7 +2,9 @@
 
 Configuration for [GlazeWM](https://github.com/glzr-io/glazewm) and [Zebar](https://github.com/glzr-io/zebar) on Windows.
 
-![Screenshot](/zebar/bar/resources/preview_image.png?raw=true)
+![Screenshot](/screenshots/screenshot_1.png?raw=true)
+
+![Screenshot](/screenshots/screenshot_2.png?raw=true)
 
 ## Installation
 

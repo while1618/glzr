@@ -93,8 +93,8 @@ window_effects:
       enabled: false
       style: "square"
     transparency:
-      enabled: false
-      opacity: "0%"
+      enabled: true
+      opacity: "95%"
 
 window_behavior:
   # New windows are created in this state whenever possible.
@@ -110,7 +110,7 @@ window_behavior:
       centered: true
 
       # Whether to show floating windows as always on top.
-      shown_on_top: false
+      shown_on_top: true
 
     fullscreen:
       # Maximize the window if possible. If the window doesn't have a
@@ -133,6 +133,11 @@ workspaces:
   - name: "10"
 
 window_rules:
+  - commands: ["set-tiling"]
+    match:
+      # Force Zen browser to tile (fixes fullscreen issue)
+      - window_process: { equals: "zen.exe" }
+
   - commands: ["ignore"]
     match:
       # Ignores any Zebar windows.
@@ -253,6 +258,8 @@ keybindings:
     bindings: ["alt+8"]
   - commands: ["focus --workspace 9"]
     bindings: ["alt+9"]
+  - commands: ["focus --workspace 10"]
+    bindings: ["alt+0"]
 
   # Workspaces - navigate
   - commands: ["focus --next-active-workspace"]
@@ -281,3 +288,15 @@ keybindings:
     bindings: ["alt+shift+8"]
   - commands: ["move --workspace 9", "focus --workspace 9"]
     bindings: ["alt+shift+9"]
+  - commands: ["move --workspace 10", "focus --workspace 10"]
+    bindings: ["alt+shift+0"]
+
+  # Move workspace to different monitors
+  - commands: ["move-workspace --direction left"]
+    bindings: ["alt+ctrl+shift+h", "alt+ctrl+shift+left"]
+  - commands: ["move-workspace --direction right"]
+    bindings: ["alt+ctrl+shift+l", "alt+ctrl+shift+right"]
+  - commands: ["move-workspace --direction up"]
+    bindings: ["alt+ctrl+shift+k", "alt+ctrl+shift+up"]
+  - commands: ["move-workspace --direction down"]
+    bindings: ["alt+ctrl+shift+j", "alt+ctrl+shift+down"]
